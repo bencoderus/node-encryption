@@ -50,4 +50,4 @@ class EncryptionService {
   }
 }
 
-module.exports = EncryptionService;
+module.exports = new EncryptionService();

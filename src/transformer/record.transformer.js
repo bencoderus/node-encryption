@@ -1,5 +1,4 @@
-const EncryptionService = require("../services/encryption.service");
-const service = new EncryptionService();
+const encryptionService = require("../services/encryption.service");
 
 /**
  * Format an object and decrypt the encrypted value.
@@ -12,7 +11,7 @@ const transformer = (record) => {
   return {
     name: record.name || "",
     role: record.role || "",
-    bvn: service.decrypt(record.bvn) || "",
+    bvn: encryptionService.decrypt(record.bvn) || "",
   };
 };
 

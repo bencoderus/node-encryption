@@ -1,8 +1,7 @@
 const { okResponse, notFoundResponse } = require("response-transformer");
 const { response, request } = require("express");
 
-const EncryptionService = require("../services/encryption.service");
-const service = new EncryptionService();
+const encryptionService = require("../services/encryption.service");
 const data = require("../../resource/data.json");
 const transformer = require("../transformer/record.transformer");
 
@@ -32,7 +31,7 @@ const index = (request, response) => {
  * @returns {response}
  */
 const find = (request, response) => {
-  const blindIndex = service.getBlindIndex(request.body.bvn);
+  const blindIndex = encryptionService.getBlindIndex(request.body.bvn);
 
   const found = data.find((record) => record.bvn_hash === blindIndex);
 

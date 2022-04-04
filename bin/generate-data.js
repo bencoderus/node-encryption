@@ -1,4 +1,5 @@
 const fs = require("fs");
+const encryptionService = require("../src/services/encryption.service");
 
 const data = [
   {
@@ -28,17 +29,13 @@ const data = [
   },
 ];
 
-const EncryptionService = require("../src/services/encryption.service");
-
 try {
-  const service = new EncryptionService();
-
   const generated = data.map((record) => {
     return {
       name: record.name,
       role: record.role,
-      bvn: service.encrypt(record.bvn),
-      bvn_hash: service.getBlindIndex(record.bvn),
+      bvn: encryptionService.encrypt(record.bvn),
+      bvn_hash: encryptionService.getBlindIndex(record.bvn),
     };
   });
 
