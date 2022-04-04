@@ -8,9 +8,16 @@ Blind indexing is an approach to securely search encrypted data with minimal inf
 1. Clone repository
 2. cd node-encryption
 3. npm install
-4. npm run generate:encrypted - to generate encrypted data.
+4. npm run generate:encrypted - Encrypts all the plain data and stores it in a json file for usage.
 5. npm run start - to start the server.
 
-## Usage
-GET localhost:3000/records
-GET localhost:3000/records/find-by-bvn {bvn: "123456789"}
+## Testing
+- Get all the records
+```bash
+curl http://localhost:3000/records
+```
+
+- Find by bvn (Change 12345678 to a valid bvn)
+```bash
+curl --header "Content-Type: application/json" -d "{\"bvn\":\"12345678\"}" http://localhost:3000/records/find-by-bvn
+```

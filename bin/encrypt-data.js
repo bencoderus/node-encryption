@@ -1,6 +1,33 @@
 const fs = require("fs");
 
-const data = require("../resource/sample-data.json");
+const data = [
+  {
+    name: "Benjamin Iduwe",
+    role: "Software Engineer",
+    bvn: "1234858589",
+  },
+  {
+    name: "John Blanco",
+    role: "Product Manager",
+    bvn: "2348581589",
+  },
+  {
+    name: "Jerry Blake",
+    role: "Product Designer",
+    bvn: "3485128589",
+  },
+  {
+    name: "James Westley",
+    role: "DevOps Engineer",
+    bvn: "8589123485",
+  },
+  {
+    name: "Sunday Monday",
+    role: "Quality Assurance Engineer",
+    bvn: "9123485858",
+  },
+];
+
 const EncryptionService = require("../src/services/encryption.service");
 
 try {
