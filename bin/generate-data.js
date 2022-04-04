@@ -42,7 +42,7 @@ try {
     };
   });
 
-  fs.writeFileSync("resource/encrypted.json", JSON.stringify(generated));
+  fs.writeFileSync("resource/data.json", JSON.stringify(generated));
 
   console.log("Encrypted record generated successfully");
 } catch (error) {

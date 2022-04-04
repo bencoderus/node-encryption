@@ -3,7 +3,7 @@ const { response, request } = require("express");
 
 const EncryptionService = require("../services/encryption.service");
 const service = new EncryptionService();
-const data = require("../../resource/encrypted.json");
+const data = require("../../resource/data.json");
 const transformer = require("../transformer/record.transformer");
 
 /**
@@ -42,7 +42,7 @@ const find = (request, response) => {
 
   return okResponse(
     response,
-    "Records retrieved successfully",
+    "Record retrieved successfully",
     transformer(found)
   );
 };
