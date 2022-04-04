@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Benjamin Iduwe",
+    "role": "Software Engineer",
+    "bvn": "1234858589"
+  },
+  {
+    "name": "John Iduwe",
+    "role": "Product Manager",
+    "bvn": "2348581589"
+  },
+  {
+    "name": "Jerry Iduwe",
+    "role": "Product Designer",
+    "bvn": "3485128589"
+  },
+  {
+    "name": "James Iduwe",
+    "role": "DevOps Engineer",
+    "bvn": "8589123485"
+  },
+  {
+    "name": "Sunday Iduwe",
+    "role": "Quality Assurance Engineer",
+    "bvn": "9123485858"
+  }
+]

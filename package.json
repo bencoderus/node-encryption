@@ -1,0 +1,22 @@
+{
+  "name": "node-encryption",
+  "version": "1.0.0",
+  "description": "Implementing in blind index search in NodeJS",
+  "main": "src/server.js",
+  "scripts": {
+    "generate:encrypted": "node bin/encrypt-data.js",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "author": "Benjamin Iduwe",
+  "license": "MIT",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "express": "^4.17.3",
+    "response-transformer": "^0.7.1"
+  },
+  "devDependencies": {
+    "chalk": "^5.0.1",
+    "nodemon": "^2.0.15"
+  }
+}
